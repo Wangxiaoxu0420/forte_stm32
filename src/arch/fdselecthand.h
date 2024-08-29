@@ -35,7 +35,7 @@ class CFDSelectHandler : public CExternalEventHandler, private CThread {
   //DECLARE_HANDLER(CFDSelectHandler)
   public:  
     //static const size_t mHandlerIdentifier;
-    const size_t mHandlerIdentifier = 0;
+    static const size_t mHandlerIdentifier = 0;
     virtual size_t getIdentifier() const;
     explicit CFDSelectHandler(CDeviceExecution& paDeviceExecution);
     ~CFDSelectHandler();

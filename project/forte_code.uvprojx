@@ -188,7 +188,7 @@
             <hadIRAM2>1</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
-            <useUlib>0</useUlib>
+            <useUlib>1</useUlib>
             <EndSel>0</EndSel>
             <uLtcg>0</uLtcg>
             <nSecure>0</nSecure>
@@ -336,9 +336,9 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>USE_HAL_DRIVER,STM32F407xx,FORTE_COMPILATION,FORTE_ENABLE_GENERATED_SOURCE_CPP,FORTE_LITTLE_ENDIAN,FORTE_SUPPORT_ARRAYS,FORTE_SUPPORT_BOOT_FILE,FORTE_SUPPORT_CUSTOM_SERIALIZABLE_DATATYPES,FORTE_SUPPORT_MONITORING,FORTE_SUPPORT_QUERY_CMD,FORTE_UNICODE_SUPPORT,FORTE_USE_64BIT_DATATYPES,FORTE_USE_LREAL_DATATYPE,FORTE_USE_REAL_DATATYPE,FORTE_USE_WSTRING_DATATYPE,NOLOG,nullptr=0</Define>
+              <Define>USE_HAL_DRIVER,STM32F407xx,FORTE_COMPILATION,FORTE_ENABLE_GENERATED_SOURCE_CPP,FORTE_LITTLE_ENDIAN,FORTE_SUPPORT_ARRAYS,FORTE_SUPPORT_BOOT_FILE,FORTE_SUPPORT_CUSTOM_SERIALIZABLE_DATATYPES,FORTE_SUPPORT_MONITORING,FORTE_SUPPORT_QUERY_CMD,FORTE_UNICODE_SUPPORT,FORTE_USE_64BIT_DATATYPES,FORTE_USE_LREAL_DATATYPE,FORTE_USE_REAL_DATATYPE,FORTE_USE_WSTRING_DATATYPE,LOGDEBUG,nullptr=0</Define>
               <Undefine></Undefine>
-              <IncludePath>..\User;..\Drivers;..\Drivers\CMSIS\Device\ST\STM32F4xx\Include;..\Drivers\CMSIS\Include;..\Drivers\STM32F4xx_HAL_Driver\Inc;..\lwip\src\include;..\lwip\src\include\lwip;..\lwip\arch;..\lwip\lwip_app;..\lwip;..\FreeRTOS\include;..\FreeRTOS\portable\RVDS\ARM_CM4F;..\lwip\lwip_app\token;..\lwip\src\include\lwip;..\Drivers\BSP\USART6;..\Drivers\BSP\ADC;..\Drivers\BSP\FLASH_SPI;..\Drivers\BSP\NORFLASH;..\Drivers\BSP\ATK_MW1278D;..\modbus;..\Drivers\BSP\RTC;..\MALLOC;..\MD5;..\Drivers\BSP\WDG;..\Drivers\BSP\TIMER;..\cm_backtrace;..\cm_backtrace\fault_handler\keil;..\src\arch\freeRTOS;..\src\arch;..\src\core;..\src\core\cominfra;..\src\core\datatypes;..\src\core\datatypes\convert;..\src\core\utils;..\src\stdfblib;..\src\stdfblib\events;..\src\stdfblib\ita;..\src\stdfblib\net;..\src;..\src_gen;..\Middlewares;..\src\arch\be_m1</IncludePath>
+              <IncludePath>..\User;..\Drivers;..\Drivers\CMSIS\Device\ST\STM32F4xx\Include;..\Drivers\CMSIS\Include;..\Drivers\STM32F4xx_HAL_Driver\Inc;..\lwip\src\include;..\lwip\src\include\lwip;..\lwip\arch;..\lwip\lwip_app;..\lwip;..\FreeRTOS\include;..\FreeRTOS\portable\RVDS\ARM_CM4F;..\lwip\lwip_app\token;..\lwip\src\include\lwip;..\Drivers\BSP\USART6;..\Drivers\BSP\ADC;..\Drivers\BSP\FLASH_SPI;..\Drivers\BSP\NORFLASH;..\Drivers\BSP\ATK_MW1278D;..\modbus;..\Drivers\BSP\RTC;..\MALLOC;..\MD5;..\Drivers\BSP\WDG;..\Drivers\BSP\TIMER;..\cm_backtrace;..\cm_backtrace\fault_handler\keil;..\src\arch\freeRTOS;..\src\arch;..\src\core;..\src\core\cominfra;..\src\core\datatypes;..\src\core\datatypes\convert;..\src\core\utils;..\src\stdfblib;..\src\stdfblib\events;..\src\stdfblib\ita;..\src\stdfblib\net;..\src;..\src_gen;..\Middlewares;..\src\arch\be_m1;..\src\stdfblib\io</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -680,7 +680,7 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>forte_arch</GroupName>
+          <GroupName>forte_src_arch</GroupName>
           <Files>
             <File>
               <FileName>forte_architecture.cpp</FileName>
@@ -755,7 +755,7 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>forte_src</GroupName>
+          <GroupName>forte_src_core</GroupName>
           <Files>
             <File>
               <FileName>basecommfb.cpp</FileName>
@@ -1085,7 +1085,7 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>forte_stdfb</GroupName>
+          <GroupName>forte_src_stdfb</GroupName>
           <Files>
             <File>
               <FileName>timedfb.cpp</FileName>
@@ -1285,7 +1285,7 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>forte_app</GroupName>
+          <GroupName>forte_src</GroupName>
           <Files>
             <File>
               <FileName>forteinit.cpp</FileName>
@@ -1498,19 +1498,9 @@
           <GroupName>user</GroupName>
           <Files>
             <File>
-              <FileName>system_stm32f4xx.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c</FilePath>
-            </File>
-            <File>
-              <FileName>startup_stm32f407xx.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f407xx.s</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_it.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\User\stm32f4xx_it.c</FilePath>
+              <FileName>forte_main.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\User\forte_main.cpp</FilePath>
             </File>
             <File>
               <FileName>freertos_task.c</FileName>
@@ -1523,9 +1513,19 @@
               <FilePath>..\User\main.c</FilePath>
             </File>
             <File>
-              <FileName>forte_main.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>..\User\forte_main.cpp</FilePath>
+              <FileName>stm32f4xx_it.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\stm32f4xx_it.c</FilePath>
+            </File>
+            <File>
+              <FileName>system_stm32f4xx.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c</FilePath>
+            </File>
+            <File>
+              <FileName>startup_stm32f407xx.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>..\Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f407xx.s</FilePath>
             </File>
           </Files>
         </Group>

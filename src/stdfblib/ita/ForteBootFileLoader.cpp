@@ -18,7 +18,12 @@
 #include <mgmcmd.h>
 #include <mgmcmdstruct.h>
 #include "../../core/device.h"
-
+/**
+ * @brief fboot文件处理功能，需要重写一遍，使用flash，而不是文件，传输的时候，可以直接将文件保存到flash里面
+ * 等到需要读取文件的时候，从flash读取出来再使用，forte默认平台支持fopen等文件操作可以直接使用
+ * 但在实际STM32中，不支持这些文件操作，要么挂载一个文件系统到flash里面也可以，比如fatfs等支持fopen这些函数的
+ * 
+ */
 char* gCommandLineBootFile = 0;
 
 ForteBootFileLoader::ForteBootFileLoader(IBootFileCallback &paCallback) : mBootfile(0), mCallback(paCallback), mNeedsExit(false){

@@ -207,7 +207,16 @@ void GetTimeStr(char *pcTime)
     GetTimeInfo(&timeinfo);
     strftime(pcTime,50,"[%Y-%m-%d %H:%M:%S]",&timeinfo);
 }
+uint32_t GetTimeStamp32(void)
+{
+    struct tm timeinfo;
+    uint32_t Timestamp;
+    GetTimeInfo(&timeinfo);
+    Timestamp = mktime(&timeinfo);
+    //printf("time stamp is 0x%x!!\r\n", Timestamp);
 
+    return Timestamp;
+}
 uint64_t GetTimeStamp(void)
 {
     struct tm timeinfo;

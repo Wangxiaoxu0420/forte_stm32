@@ -38,7 +38,7 @@ extern uint32_t SystemCoreClock;
 /* 鍐呭瓨鍒嗛厤鐩稿叧瀹氫箟 */
 #define configSUPPORT_STATIC_ALLOCATION                 0                       /* 1: 锟??鎸侀潤鎬佺敵璇峰唴锟??, 榛橈拷??: 0 */
 #define configSUPPORT_DYNAMIC_ALLOCATION                1                       /* 1: 锟??鎸佸姩鎬佺敵璇峰唴锟??, 榛橈拷??: 1 */
-#define configTOTAL_HEAP_SIZE                           ((size_t)(50 * 1024))   /* FreeRTOS鍫嗕腑锟??鐢ㄧ殑RAM鎬婚噺, 鍗曚綅: Byte, 鏃犻粯璁ら渶瀹氫箟 */
+#define configTOTAL_HEAP_SIZE                           ((size_t)(70 * 1024))   /* FreeRTOS鍫嗕腑锟??鐢ㄧ殑RAM鎬婚噺, 鍗曚綅: Byte, 鏃犻粯璁ら渶瀹氫箟 */
 #define configAPPLICATION_ALLOCATED_HEAP                0                       /* 1: 鐢ㄦ埛鎵嬪姩鍒嗛厤FreeRTOS鍐呭瓨锟??(ucHeap), 榛橈拷??: 0 */
 #define configSTACK_ALLOCATION_FROM_SEPARATE_HEAP       0                       /* 1: 鐢ㄦ埛锟??琛屽疄鐜颁换鍔″垱寤烘椂浣跨敤鐨勫唴瀛樼敵璇蜂笌閲婃斁鍑芥暟, 榛橈拷??: 0 */
 

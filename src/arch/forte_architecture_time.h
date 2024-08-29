@@ -43,6 +43,9 @@ time_t forte_time(){
 
 #else
 #include <my_time.h>
+extern "C" {
+#include "./BSP/RTC/rtc.h"
+}
 inline
 struct tm_test* forte_localtime(const time_t* pa_time){
   return (struct tm_test*)localtime(pa_time);
@@ -60,7 +63,8 @@ struct tm_test* forte_gmtime(const time_t* pa_time){
 
 inline
 time_t forte_time(){
-  return time(0);
+  //return time(0);
+  return GetTimeStamp32();
 }
 
 #endif

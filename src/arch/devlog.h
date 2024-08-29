@@ -40,10 +40,10 @@ enum E_MsgLevel {
 #endif
 
 #ifdef LOGDEBUG
-# define DEVLOG_ERROR(...) logMessage(E_ERROR, __VA_ARGS__)
-# define DEVLOG_WARNING(...) logMessage(E_WARNING, __VA_ARGS__)
-# define DEVLOG_INFO(...) logMessage(E_INFO, __VA_ARGS__)
-# define DEVLOG_DEBUG(...) logMessage(E_DEBUG, __VA_ARGS__)
+# define DEVLOG_ERROR(...) printf(__VA_ARGS__)//logMessage(E_ERROR, __VA_ARGS__)
+# define DEVLOG_WARNING(...) printf(__VA_ARGS__)//logMessage(E_WARNING, __VA_ARGS__)
+# define DEVLOG_INFO(...) printf(__VA_ARGS__)//logMessage(E_INFO, __VA_ARGS__)
+# define DEVLOG_DEBUG(...) printf(__VA_ARGS__)//logMessage(E_DEBUG, __VA_ARGS__)
 # define DEVLOG_ERROR_VAR(X) X
 # define DEVLOG_WARNING_VAR(X) X
 # define DEVLOG_INFO_VAR(X) X

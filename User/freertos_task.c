@@ -77,7 +77,6 @@ extern void forte_main(void);
 void t_monitor(void *pvParameters)
 {
     pvParameters = pvParameters;
-    char *InfoBuffer;
     printf("forte_main start!! \n");
     forte_main();
     vTaskDelay(2000 / portTICK_PERIOD_MS);
@@ -87,7 +86,12 @@ void t_monitor(void *pvParameters)
   	//ERROR_REPORT(STR_REPORT_DEV_WARNING, "system restart!!!", 0);
     while (1)
     {
-        //LED_BLINK();
-		vTaskDelay(10);
+        char InfoBuffer[512];
+        vPortEnterCritical();
+        vTaskList(InfoBuffer);
+        vPortExitCritical();
+        printf("\r\n任务名\t状态\t优先级\t剩余栈\t任务序号\r\n");
+        printf("%s",InfoBuffer);
+		vTaskDelay(1000);
     }
 }

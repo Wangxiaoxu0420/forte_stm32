@@ -78,7 +78,7 @@ const TForteUInt32 cg_unStringDictInitialMaxNrOfStrings = 300;
 
 const TForteUInt32 cg_unNumberOfHandlers = 2;
 
-#define FORTE_BOOT_FILE_LOCATION "forte.fboot"
+#define FORTE_BOOT_FILE_LOCATION ""
 
 extern char* gCommandLineBootFile;
 

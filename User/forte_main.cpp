@@ -6,7 +6,6 @@
 #include "forteinit.h"
 #include "forte_Init.h"
 
-
 static const char *const TAG = "MAIN";
 
 extern "C" {
@@ -40,12 +39,10 @@ void MyForteTask(void *pvParameters)
     vTaskDelete(NULL);
 }
 
-
 void forte_main(void)
 {
 
     xTaskCreate( MyForteTask, "MY_FORTE", 10000, &ucParameterToPass, tskIDLE_PRIORITY, &xHandle );
-     
     configASSERT(xHandle);
 }
 
@@ -99,7 +96,7 @@ void printLogMessage(char paLevel, char * const paMessage)
 	}
 
 
-
+    printf("%s", paMessage);
 	switch (paLevel)
 	{
 	case E_INFO:

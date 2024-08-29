@@ -21,6 +21,7 @@ void rtc_set_alarma(uint8_t week, uint8_t hour, uint8_t min, uint8_t sec);      
 
 void GetTimeInfo(struct tm *info);
 void GetTimeStr(char *pcTime);
+uint32_t GetTimeStamp32(void);
 uint64_t GetTimeStamp(void);
 void _UpdateTime(uint32_t Timestamp);
 

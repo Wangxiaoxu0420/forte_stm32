@@ -24,3 +24,14 @@ int main(void)
 
     freertos_task();                    /* 创建lwIP的任务函数 */
 }
+// 断言处理函数
+void __aeabi_assert(const char *file, unsigned long line, const char *func, const char *expr)
+{
+    fprintf(stderr, "Assertion failed in %s:%lu, function %s, expression %s\n", file, line, func, expr);
+    // 你可以在这里添加更多的错误处理逻辑，例如打印堆栈跟踪
+    // 也可以添加一个无限循环来停止程序
+    while (1)
+    {
+        ;
+    }
+}
