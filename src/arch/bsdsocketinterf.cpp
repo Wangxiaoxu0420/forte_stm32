@@ -91,7 +91,7 @@ CBSDSocketInterface::TSocketDescriptor CBSDSocketInterface::openTCPClientConnect
     stSockAddr.sin_addr.s_addr = inet_addr(pa_acIPAddr);
     memset(&(stSockAddr.sin_zero), '\0', sizeof(stSockAddr.sin_zero));
 
-    if(-1 == lwip_connect(nSocket, (struct sockaddr *) &stSockAddr, sizeof(struct sockaddr))){
+    if(-1 == connect(nSocket, (struct sockaddr *) &stSockAddr, sizeof(struct sockaddr))){
       close(nSocket);
       DEVLOG_ERROR("CBSDSocketInterface: connect() failed: %s\n", strerror(errno));
     }

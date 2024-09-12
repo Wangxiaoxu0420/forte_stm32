@@ -30,9 +30,9 @@
 
 #undef connect //gets confused with connect function of conn.h and childs
 
-/*inline int connect(int s, const struct sockaddr *name, socklen_t namelen) {
+inline int connect(int s, const struct sockaddr *name, socklen_t namelen) {
   return lwip_connect(s, name, namelen);
-}*/
+}
 
 //these include needs to be last
 #include "../gensockhand.h"
